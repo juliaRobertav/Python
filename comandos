@@ -34,3 +34,17 @@ print(frase.rstrip())              #r = direita/l = esquerda
 print('-' .join(frase))         #coloca o caractere entre as letras
 texto = frase.split()
 print('-' .join(texto))         #caractere entre palavras
+
+
+- count
+- in
+- find
+- len
+- replace
+- split
+- join
+- strip
+- lstrip
+- rstrip
+- upper
+- isupper
