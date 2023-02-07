@@ -48,3 +48,4 @@ print('-' .join(texto))         #caractere entre palavras
 - rstrip
 - upper
 - isupper
+-invnome
