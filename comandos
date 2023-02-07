@@ -1,0 +1,36 @@
+print(' 0123456789ABCDE')
+frase = 'Curso de Python'
+print(frase)
+print(frase[:5] == 'Curso')
+print(len(frase))
+
+for x in range(len(frase)):
+    print(frase[x], end=' ')
+
+print(frase.count('o'))
+print(frase.find('o'))       #-1 significa que não tem
+print(frase.replace('Python', 'Café'))     #substitui
+
+print('Curso' in frase)       #procura a palavra
+
+frase2 = frase[0:9]+'Café'     #troca a frase
+print(frase2)
+
+print(frase.upper())      #maiúsculo
+print(frase.isupper())    #boolean
+
+print(frase.split())               #dividi e forma uma lista(variável com vários valores)
+print(x[2])  
+p1 = frase.split()
+print(p1)
+print(len(p1))
+for x in range(len(p1)):      #retira todos espaços
+    print(p1[x], end='')       #sem o end imprimi embaixo do outro
+    print(p1[x], end='\t')         #\t = tab
+
+print(frase.strip())       #retira o espaço inicial/final
+print(frase.rstrip())              #r = direita/l = esquerda
+
+print('-' .join(frase))         #coloca o caractere entre as letras
+texto = frase.split()
+print('-' .join(texto))         #caractere entre palavras
