@@ -1,4 +1,35 @@
 print("Hoje é \033[7;31;44m dia de aula:\33[m")    ###CORES###
-vetor: variável com vários valores
-tupla não pode ser alterado
-dicionário;vetor onde cada posição tem 2 valores (título e valor)
+###vetor: variável com vários valores
+###tupla[] não pode ser alterado
+###dicionário;vetor onde cada posição tem 2 valores (título e valor)
+###laço = FOR i IN range():
+###while:
+i = 3
+while i < 10
+n = int(input('Digite um número: '))
+#print(i, end=' ')#
+#i += 1#
+#n = 1#
+#while n != 0:#  #!= diferente#
+#n = int(input('Digite um número: '))#
+###list() = lista (varios valores)
+###EXEMPLO:###
+valor = 0
+par = list()
+impar = list()
+contPar = 0[]
+contImp = 0[]
+while valor < 10:
+    n = int(input('Digite um valor:'))
+    x = n % 2
+    if x == 0:
+        par.append(n)
+        contPar += 1
+    else:
+       impar.append(n)
+       contImp += 1
+    valor += 1
+ print(f'Voce digitou {contPar} numeros pares)
+ print(f'Voce digitou {contImp} numeros impares)
+print(f'Pares: \33[31m{par}\33[m')
+print(f'Impares: \33[33m{impar}\33[m')
