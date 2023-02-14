@@ -1,0 +1,4 @@
+print("Hoje é \033[7;31;44m dia de aula:\33[m")    ###CORES###
+vetor: variável com vários valores
+tupla não pode ser alterado
+dicionário;vetor onde cada posição tem 2 valores (título e valor)
