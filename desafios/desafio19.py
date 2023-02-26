@@ -1,0 +1,6 @@
+co = float(input('Digite o valor do cateto oposto:'))
+ca = float(input('Digite o valor do cateto adjacente:'))
+hi = float(input('Digite o valor da hipotenusa:'))
+print('Seno = {}'.format(co/hi))
+print('Cosseno = : {}'.format(ca/hi))
+print('Tangente = {}'.format(co/ca))
