@@ -1,30 +1,40 @@
-from random import randint
+while i == 0:
+    mult = 0
+    x = random.randint(1, 1000)
+    for count in range(2, x):
+        if (x % count == 0):
+            mult += 1
+        if (mult==0):
+         i += 1
+n = 0
 
-print('Início')
-
-random = randint(0, 100)
-chute = 0;
-chances = 10;
-while chute != random:
+while n != x:
     chute = input('Chute um número primo entre 0 a 100: ')
-    if chute.isnumeric():
-        chute = int(chute)
-        if chute == random:
-            print('')
-            print('Parabéns, você venceu! O número era {} .'.format(random))
-            print('')
-            break;
-        else:
-            print('')
-            if chute > random:
-                print('Você errou! Dica: É um número menor.')
-            else:
-                print('Você errou! Dica: É um número maior.')
-            print('')
-        if chances == 0:
-            print('')
-            print('Suas chances acabaram, você perdeu!')
-            print('')
-            break;
+
+    if n > x:
+        chances = 15
+        print('Você errou! Dica: É um número menor.'.format(chances - 1))
+        break;
+
+    else:
+        chances = 15
+        print('Você errou! Dica: É um número maior.'.format(chances - 1))
+        print('')
+
+
+    if n == x:
+        print('')
+        print('Parabéns, você venceu! O número era {} .'.format(random))
+        print('')
+        break;
+
+    else:
+        print('')
+
+    if chances == 0:
+        chances = 0
+        print('')
+        print('Suas chances acabaram, você perdeu!')
+        break;
 
 print('Fim do Jogo')
