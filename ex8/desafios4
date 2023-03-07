@@ -1,0 +1,10 @@
+numeros = []
+pares = []
+impares = []
+for n in range (0, 8):
+    num = int(input('Digite o valor:'))
+    if n % 2 == 0:
+        print(f'O número digitado é par.{pares}')
+    else:
+        print(f'O número digitado é ímpar {impares}')
+        break
