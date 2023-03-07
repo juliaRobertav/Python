@@ -33,3 +33,53 @@ while valor < 10:
  print(f'Voce digitou {contImp} numeros impares)
 print(f'Pares: \33[31m{par}\33[m')
 print(f'Impares: \33[33m{impar}\33[m')
+
+
+
+def: definir função
+ex:
+def bolo():
+    print('02 xícaras de farinha de trigo')
+    print('03 ovos')
+    print('1kg de Fubá')
+
+bolo()
+
+
+a = 10              #variável global
+
+def calcula():
+    a = 20          #variável local
+    
+def resultado():
+    a = 30
+    
+print(a)
+
+
+def calcula():
+    a = 20
+    return a        #retorna
+
+print(calcula())
+
+def calcula(a, b):  #parâmetros:dados que são inseridos dentro da função para retornar e trabalhar algo
+    a = 20
+    b = 20 + a
+    return b
+
+print(calcula())
+
+def calcula(a=0, b=0):  
+    soma = a + b
+    return print(soma)
+
+calcula(10, 15)
+
+def pacote(*n):     #função empacotadora(vários valores)
+    for i in n:
+        print(i, end=' ')
+        print('---', end=' ')
+
+pacote(1, 2, 3, 4)
+pacote(5, 6, 7, 8, 9, 10)
