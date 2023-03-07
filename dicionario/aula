@@ -1,0 +1,15 @@
+K = { 'nome': 'Lindomar', 'idade': 20}    ###K:items  nome/idade:key   lindomar/20:value
+
+nomes = {}
+valores = []
+for i in range(2):
+    nomes['nome']= input('Nome:')
+    nomes['idade'] = int(input('Idade:'))
+    nomes['sexo'] = input('Sexo:')
+    valores.append(nomes.copy())
+    del nomes['idade']          ###apaga idade
+
+print(valores[0]['nome'])
+
+
+###randint: sorteio
