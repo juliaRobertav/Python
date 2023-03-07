@@ -1,40 +1,45 @@
+import random
+import time
+
+tempo_inicio = time.time()
+
+mult = 0
+i = 0
+vida = 1000
+chance = 15
+sorteio = 0
+
 while i == 0:
     mult = 0
-    x = random.randint(1, 1000)
-    for count in range(2, x):
-        if (x % count == 0):
+    sorteio = random.randint(1, 1000)
+    for count in range(2, sorteio):
+        if (sorteio % count) == 0:
             mult += 1
-        if (mult==0):
-         i += 1
+        if mult == 0:
+            i += 1
 n = 0
 
-while n != x:
-    chute = input('Chute um número primo entre 0 a 100: ')
+while n != sorteio:
+    n = int(input('Digite um número:'))
+    tempo_resposta = time.time()
+    print(tempo_resposta - tempo_inicio)
 
-    if n > x:
-        chances = 15
-        print('Você errou! Dica: É um número menor.'.format(chances - 1))
-        break;
+    if tempo_resposta -tempo_inicio > 60:
+        print('Seu tempo acabou!')
+        break
 
-    else:
-        chances = 15
-        print('Você errou! Dica: É um número maior.'.format(chances - 1))
-        print('')
-
-
-    if n == x:
-        print('')
-        print('Parabéns, você venceu! O número era {} .'.format(random))
-        print('')
-        break;
-
-    else:
-        print('')
-
-    if chances == 0:
-        chances = 0
-        print('')
-        print('Suas chances acabaram, você perdeu!')
-        break;
-
-print('Fim do Jogo')
+    if chance >=0 and vida >= 0:
+        if n % 2 == 0:
+            vida = vida - abs(n)
+            print('Errou! Você digitou um número par! Você tem: ', vida)
+        if n > sorteio:
+            print('O número é menor!')
+            chance -= 1
+        else:
+            print('O número é maior!')
+            chance -= 1
+        if chance <= 0 or vida <=0:
+            print('FIM DE JOGO!')
+            break
+        if n == sorteio:
+            print('Você acertou, Parabéns!')
