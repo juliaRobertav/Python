@@ -5,6 +5,8 @@ dia = int(input('DIA:'))
 mes = int(input('MÊS:'))
 ano = int(input('ANO:'))
 idade = 2023 - ano
+idade = 1 - mes
+idade = 2 - dia
 if idade >= 18:
     print('Pode tirar sua CNH!')
 elif idade < 18:
