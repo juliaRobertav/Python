@@ -13,7 +13,7 @@ while i == 0:
     mult = 0
     sorteio = random.randint(1, 1000)
     for count in range(2, sorteio):
-        if (sorteio % count) == 0:
+        if (sorteio % count== 0) :
             mult += 1
         if mult == 0:
             i += 1
