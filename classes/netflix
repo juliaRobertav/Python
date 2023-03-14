@@ -1,1 +1,24 @@
+class Cliente:
+    def __init__(self, nome='', email='', planoX='', tipo='user'):
+        self.nome = nome
+        self.email = email
+        self.planos = ['basic', 'medium', 'premium']
+        if planoX in self.planos:
+            self.plano = planoX
+        else:
+            print('Plano Inválido.')
+            self.plano = ''
 
+        self.tipos = ['user', 'admin']
+        if tipo in self.tipos:
+            self.tipo = tipo
+        else:
+            print('Tipo de usuário inválido.')
+            self.tipo = ''
+            
+            
+            
+from netflix import Cliente
+
+b1 = Cliente('Julia', 'jj@ggi', 'premium')
+print(b1.plano)
