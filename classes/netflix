@@ -18,7 +18,20 @@ class Cliente:
             
             
             
+    def mudar_plano(self, novoPlano):
+        if novoPlano in self.planos:
+            self.plano = novoPlano
+        else:
+            print('Plano Inválido')
+            
+            
+     def ver_filme(self, filme, planoFilme):
+            
+            
+                  
 from netflix import Cliente
 
-b1 = Cliente('Julia', 'jj@ggi', 'premium')
-print(b1.plano)
+b1 = Cliente('Julia', 'jj@ggi', 'premium', 'admin')
+print(f'Plano Velho: \33[31m{b1.plano.upper()}\33[m')
+b1.mudar_plano('basic')
+print(f'Plano Novo: \33[34m{b1.plano.upper()}\33[m')
