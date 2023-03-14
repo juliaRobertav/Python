@@ -13,8 +13,8 @@ class ControleRemoto:
         - alterar volume
         
 class ControleRemoto:
-        def __init__(self, corControle, larg, alt, compr):    #init: construtor/self:obj-mesmo sistema obj diferentes
-        self.cor = corControle     #def carac. obj(propriedade)
+        def __init__(self, corControle, larg, alt, compr):    #init: método construtor/
+        self.cor = corControle     #self:obj-mesmo sistema obj diferentes/def carac. obj(propriedade)
         self.larg = larg
         self.alt = alt
         self.compr = compr
