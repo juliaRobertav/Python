@@ -1,0 +1,37 @@
+
+def forca():
+
+secreto: str ='relógio'
+digitadas = []
+chances = 3
+
+print('=' * 20)
+print("  JOGO DA FORCA! \n SEJA BEM VINDO!  ")
+print('=' * 20)
+
+
+while True:
+    palavra = str(input("Digite uma letra"))
+
+    if len(palavra)>1
+        print("DIGITE APENAS 1 LETRA POR VEZ!!!ERRO!!!")
+        digitadas.append(palavra)
+        continue
+
+digitado_temporário = ''
+for letra_secreta in secreto:
+    if letra_secreta in digitadas:
+        digitado_temporário += letra_secreta
+    else:
+        digitado_temporário += '*'
+
+if digitado_temporário == secreto:
+    print(" PARABÉNS VOCÊ ACERTOU!!!")
+else:
+    print(f"A palavra está assim: {digitado_temporário}")
+
+    if palavra not in secreto:
+        chances -= 1
+
+        if chances <= 0:
+            print("ACABOU! VOCÊ PERDEU!!")
