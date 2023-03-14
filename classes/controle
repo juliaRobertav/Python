@@ -30,10 +30,9 @@ class ControleRemoto:
   from controle import ControleRemoto
 
 corX =input('Cor:')
-j1 = ControleRemoto(corX, 2, 3, 4)
+j1 = ControleRemoto(corX, 2, 3, 4)      #instanciar obj(carregar todos elementos da classe)
 j2 = ControleRemoto('branco', 8, 9, 10)
-print(j1.cor)
+print(j1.cor)        #cada um como obj diferente
 print(j2.cor)       #corControle: parâmetro temporário  
-                    # cor:característica do obj que vem como parametro 
-                    #instanciar obj(carregar todos elementos da classe)
-                    #cada um como obj diferente
+                    # cor:característica do obj que vem como parametro
+                   
