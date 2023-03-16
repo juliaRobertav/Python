@@ -1,43 +1,43 @@
 import random
 
 
-def jogo_forca():
+def forca():
+    secreto = random.choice
     digitadas = []
-    palavras = ["livro", "pitbull", "cerejeira", "mão", "sobrinho", "Mercedes-Benz"]
-    secreto = random.choice(palavras)
-    dicas = []
-    letras_corretas = []
-    letras_erradas = []
-    corpo = 6
-    modos_do_jogo = {
-        "Nutela",
-        "Café com Leite",
-        "Raiz"
-    }
+    chances = 3
 
     print('=' * 20)
     print("  JOGO DA FORCA! \n SEJA BEM VINDO!  ")
     print('=' * 20)
 
-    for j in digitadas:  ##j=jogo
-        jogo = input(f"Escolha em qual modo você quer jogar: {modos_do_jogo}")
-        if modos_do_jogo == "Nutela":
-            tentativa = str(input("Digite uma letra: \n"))
-            if digitadas == secreto:
-                print("Você acertou!!!PARABÉNS!!!")
-            elif len(tentativa) > 1:
-                print("DIGITE APENAS 1 LETRA POR VEZ!!!ERRO!!!")
-                corpo -= 1
-            else:
-                print("Deseja uma Dica?(S/N)")
-                if "S":
-                    print(dicas)
-                if "N":
-                    continue
-        elif digitadas != palavras:
-            print("Errou!!Tente Novamente!")
-            corpo -= 1
-        break
+    while True:
+        palavra = str(input("Digite uma letra: \n"))
+        if len(palavra) > 1:
+            print("DIGITE APENAS 1 LETRA POR VEZ!!!ERRO!!!")
+            digitadas.append(palavra)
+            chances -= 2
+            continue
 
-    if __name__ == "__main__":
-        jogo_forca()
+    digitado_temporário = ''
+    for letra_secreta in secreto:
+        if letra_secreta in digitadas:
+            digitado_temporário += letra_secreta
+        else:
+            digitado_temporário += '*'
+            break
+
+    if digitado_temporário == secreto:
+        print(" PARABÉNS VOCÊ ACERTOU!!!")
+
+    else:
+        print(f"A palavra está assim: {digitado_temporário}")
+
+    if palavra not in secreto:
+        chances -= 1
+    breakpoint()
+    print(f"Você tem {chances} chances.")
+    print()
+
+
+if __name__ == "__main__":
+    forca()
