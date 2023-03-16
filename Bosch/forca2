@@ -1,43 +1,49 @@
 import random
 
 
-def forca():
-    secreto = random.choice
-    digitadas = []
-    chances = 3
-
+def forca2():
     print('=' * 20)
     print("  JOGO DA FORCA! \n SEJA BEM VINDO!  ")
     print('=' * 20)
 
-    while True:
-        palavra = str(input("Digite uma letra: \n"))
-        if len(palavra) > 1:
-            print("DIGITE APENAS 1 LETRA POR VEZ!!!ERRO!!!")
-            digitadas.append(palavra)
-            chances -= 2
-            continue
+    digitadas = []
+    palavras = ["livro", "pitbull", "cerejeira", "mão", "sobrinho", "Mercedes-Benz"]
+    secreto = random.choice(palavras)
+    dicas = []
+    letras_corretas = []
+    letras_erradas = []
+    corpo = 6
+    modos_do_jogo = {
+        "Nutela",
+        "Café com Leite",
+        "Raiz"
+    }
 
-    digitado_temporário = ''
-    for letra_secreta in secreto:
-        if letra_secreta in digitadas:
-            digitado_temporário += letra_secreta
-        else:
-            digitado_temporário += '*'
-            break
+    for j in digitadas:  ##j=jogo
+        jogo = input(f"Escolha em qual modo você quer jogar: {modos_do_jogo}")
+        if modos_do_jogo == "Nutela":
+            tentativa = str(input("Digite uma letra: \n"))
+            if digitadas == secreto:
+                print("Você acertou!!!PARABÉNS!!!")
+            elif len(tentativa) > 1:
+                print("DIGITE APENAS 1 LETRA POR VEZ!!!ERRO!!!")
+                corpo -= 1
+            else:
+                print("Deseja uma Dica?(S/N)")
+                if "S":
+                    print(dicas)
+                if "N":
+                    continue
+        elif digitadas != palavras:
+            print("Errou!!Tente Novamente!")
+            corpo -= 1
+        break
 
-    if digitado_temporário == secreto:
-        print(" PARABÉNS VOCÊ ACERTOU!!!")
 
-    else:
-        print(f"A palavra está assim: {digitado_temporário}")
-
-    if palavra not in secreto:
-        chances -= 1
-    breakpoint()
-    print(f"Você tem {chances} chances.")
-    print()
+def modo2():
+    return forca2()
 
 
 if __name__ == "__main__":
-    forca()
+    forca2()
+    modo2()
