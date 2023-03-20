@@ -1,0 +1,107 @@
+import random
+
+
+
+def imprimir_mensagem():
+    print("_____________________________________")
+    print("!!!SEJA BEM VINDO AO JOGO DA FORCA!!!")
+    print("_____________________________________")
+    print("****************************")
+    print(f"ESCOLHA O MODO DE JOGO -- :")
+    print("****************************")
+    print("Digite uma letra:")
+
+
+def jogo():
+    imprimir_mensagem()
+    palavra_secreta()
+    nutela()
+    cafe_com_leite()
+    erros()
+
+
+def palavra_secreta():
+    imprimir_mensagem()
+    partes_do_corpo = 6
+    letras_erradas = []
+    letras_exatas = []
+    digitadas = []
+    palavras = ["livro", "pitbull", "cerejeira", "mão", "sobrinho", "Mercedes-Benz"]
+    secreto = random.choice(palavras)
+    dicas = ["ler", "raça de cachorro", "árvore", "parte do corpo", "parente", "marca de automóveis"]
+    palavras.append(letras_erradas, letras_exatas, dicas)
+    palavras.insert(letras_erradas, letras_exatas, dicas)
+    if digitadas == secreto:
+        print("PARABÉNS VOCÊ GANGOU!!!")
+    if digitadas > 1:
+        print("ERRO!!DIGITE UMA LETRA POR VEZ!")
+    if digitadas != secreto:
+        print("TENTE NOVAMENTE!!")
+    if partes_do_corpo == 0:
+        print("AS TENTATIVAS ACABARAM!!!")
+
+
+def nutela():
+    palavra_secreta()
+    digitadas = []
+    print(f"{digitadas}")
+
+
+
+def cafe_com_leite():
+    palavra_secreta()
+
+
+def erros():
+    print("  _______     ")
+    print(" |/      |    ")
+
+    if (erros == 1):
+        print(" |      (_)   ")
+        print(" |            ")
+        print(" |            ")
+        print(" |            ")
+
+    if (erros == 2):
+        print(" |      (_)   ")
+        print(" |      \     ")
+        print(" |            ")
+        print(" |            ")
+
+    if (erros == 3):
+        print(" |      (_)   ")
+        print(" |      \|    ")
+        print(" |            ")
+        print(" |            ")
+
+    if (erros == 4):
+        print(" |      (_)   ")
+        print(" |      \|/   ")
+        print(" |            ")
+        print(" |            ")
+
+    if (erros == 5):
+        print(" |      (_)   ")
+        print(" |      \|/   ")
+        print(" |       |    ")
+        print(" |            ")
+
+    if (erros == 6):
+        print(" |      (_)   ")
+        print(" |      \|/   ")
+        print(" |       |    ")
+        print(" |      /     ")
+
+    if (erros == 7):
+        print(" |      (_)   ")
+        print(" |      \|/   ")
+        print(" |       |    ")
+        print(" |      / \   ")
+
+    print(" |            ")
+    print("_|___         ")
+    print()
+
+
+if (__name__ == '__main__'):
+    jogo()
