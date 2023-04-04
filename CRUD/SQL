@@ -1,0 +1,9 @@
+create database netflix;
+use netflix;
+create table usuarios (
+id int not null auto_increment primary key,
+user varchar(150) not null,
+email varchar(100) not null,
+created datetime not null
+);
+select * from usuarios;
