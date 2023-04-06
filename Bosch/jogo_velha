@@ -7,12 +7,13 @@
 #exibir tabela
 #MQTT(pesquisar mais)
 #não esquecer de aplicar no main
+#jogador escolher a posição e "X" ou "O"
 
 class Jogo:
         
-    def __init__(self,criar_tabela, imprimir_tabela, jogo, tabela):
+    def __init__(self,criar_tabela, jogadas, jogo, tabela):
         self.criar_tabela()
-        self.imprimir_tabela()
+        self.jogadas()
         self.jogo()
         self.tabela = tabela
 
@@ -27,21 +28,20 @@ class Jogo:
                  ]
 
 
-    def imprimir_tabela(self):
+    def jogadas(self):
         """
-        "Função onde imprimi a tabela para jogar
-        :param tabela: matriz
+        "Função onde calcula as jogadas"
+        :param jogadas
         """
         jogada == 0
-        posicao == 1
-        player_1 = "X"
-        player_2 = "O"
-        for players in posicao: 
-            if player_1 == jogada:
-                jogada1 == "❌"
-                print(jogada1)
-            if player_2 == jogada:
-                jogada2 == "⭕"
-                print(jogada2)
+        while True:
+            for i in range(3):
+                for j in range(3):
+                    if tabela[i][j] == 0:
+                        print(" _ ", end=' ')
+                    elif tabela[i][j] == 1:
+                        print(" ❌ ", end=' ')
+                    elif tabela[i][j] == 1:
+                        print(" ⭕ ", end=' ')
 
-    #def jogo(imprimir_tabela):
+            print()
