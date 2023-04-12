@@ -25,7 +25,7 @@ class Aplicacao():
 
     def frames(self):
         self.frame0 = Frame(self.janela, bg='#EFEBFE')
-        self.frame0.place(relx=0.03, rely=0.03, relwidth=0.94, relheight=0.11)    #place=
+        self.frame0.place(relx=0.03, rely=0.03, relwidth=0.94, relheight=0.11)    #place=dimensões
         
         self.frame1 = Frame(self.janela, bg='#EFEBFE')
         self.frame1.place(relx=0.03, rely=0.20, relwidth=0.94, relheight=0.25)
