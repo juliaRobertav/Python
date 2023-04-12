@@ -17,3 +17,9 @@ botao = tk.Button(janela, text='Ir para nova janela',command=abrir_janela)
 botao.grid(row=0, column=0)  # colocar botao dentro da janela
 
 janela.mainloop()
+
+
+#links:
+#https://youtu.be/-vk1hE8KPtM
+#https://youtu.be/ktZyxBUIYn0
+#https://pt.stackoverflow.com/questions/491853/como-posso-passar-dados-de-uma-janela-tkinter-para-a-outra
