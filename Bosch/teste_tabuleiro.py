@@ -33,3 +33,12 @@
 			return "empate"
 		else:
 			return [*self.tabuleiro.values()].count(' ')
+
+		
+		
+		
+	print("   |   |   ")
+	print("---|---|---")
+	print("   |   |   ")
+	print("---|---|---")
+	print("   |   |   ")
