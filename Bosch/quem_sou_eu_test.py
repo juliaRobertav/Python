@@ -1,4 +1,5 @@
 import random
+import pandas as pd
 
 class Personagem:
     def __init__(self, nome, idade):
@@ -28,6 +29,24 @@ class Personagem:
         else:
             print("Você errou!")
 
+    # Getter e Setter para o atributo nome
+    def get_nome(self):
+        return self._nome
+
+    def set_nome(self, nome):
+        self._nome = nome
+
+    # Classmethod para criar um personagem com base em uma string
+    @classmethod
+    def criar_personagem(cls, personagem_str):
+        nome, idade = personagem_str.split(",")
+        return cls(nome.strip(), int(idade.strip()))
+
+    # Staticmethod para exibir uma mensagem de boas-vindas
+    @staticmethod
+    def boas_vindas():
+        print("Bem-vindo ao jogo 'Quem sou eu?'!")
+
 class Animal(Personagem):
     def __init__(self, nome, idade, especie):
         super().__init__(nome, idade)
@@ -52,21 +71,26 @@ class PersonagemFicticio(Personagem):
     def __str__(self):
         return super().__str__() + f"\nObra: {self._obra}"
 
-# Exemplo de uso do jogo
-def main():
-    # Criando personagens
-    leao = Animal("Leão", 5, "Felino")
-    shakespeare = PessoaFamosa("William Shakespeare", 456, "Escritor")
-    superman = PersonagemFicticio("Superman", 30, "Quadrinhos")
+class PalavrasAnimais:
+    _palavras = ["leão", "elefante", "girafa", "tigre", "macaco"]
+    _dicas = [
+        "Sou o rei da selva.",
+        "Tenho uma tromba longa.",
+        "Tenho um pescoço comprido.",
+        "Sou um felino listrado.",
+        "Sou conhecido por subir em árvores."
+    ]
 
-    # Jogando com os personagens
-    leao.jogar()
-    print()
+    @classmethod
+    def obter_palavra(cls):
+        indice = random.randint(0, len(cls._palavras) - 1)
+        return cls._palavras[indice]
 
-    shakespeare.jogar()
-    print()
+    @classmethod
+    def obter_dica(cls):
+        indice = random.randint(0, len(cls._dicas) - 1)
+        return cls._dicas[indice]
 
-    superman.jogar()
+class Palavras:
+    # Adicione
 
-if __name__ == "__main__":
-    main()
