@@ -1,3 +1,4 @@
+#exemplos
 K = { 'nome': 'Lindomar', 'idade': 20}    ###K:items  nome/idade:key   lindomar/20:value
 
 nomes = {}
