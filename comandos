@@ -1,3 +1,4 @@
+# apenas exemplos de aula
 print(' 0123456789ABCDE')
 frase = 'Curso de Python'
 print(frase)
